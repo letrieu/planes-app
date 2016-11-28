@@ -1,0 +1,79 @@
+<div ng-cloak layout="row" layout-align="center">
+  <md-card flex="50">
+    <md-toolbar class="md-theme-light">
+      <h2 class="md-toolbar-tools">
+        <span>Xác nhận</span>
+      </h2>
+    </md-toolbar>
+
+    <md-card-content>
+      <div layout="row" layout-align="end" style="margin-bottom: 5px; margin-top: 5px; color: #F44336;" ng-show="verifyCtrl.isNotify">
+        {{verifyCtrl.notifyMsg}}
+      </div>
+      <md-list>
+      <md-subheader class="md-no-sticky">Thông tin hành khách</md-subheader>
+        <div ng-repeat="person in verifyCtrl.info.persons">
+        <md-list-item class="md-2-line">
+        <div class="md-list-item-text">
+            <h3> {{ person.title }} </h3>
+          </div>
+          <div class="md-list-item-text">
+            <p> Họ </p>
+            <h3> {{ person.lastName }} </h3>
+          </div>
+          <div class="md-list-item-text">
+            <p> Tên </p>
+            <h3> {{ person.firstName }} </h3>
+          </div>
+        </md-list-item>
+        </div>
+        <md-subheader class="md-no-sticky">Thông tin vé</md-subheader>
+        <md-list-item class="md-2-line">
+          <div class="md-list-item-text">
+            <h3> Giá vé </h3>
+            <p> {{ verifyCtrl.info.price }} </p>
+          </div>
+        </md-list-item>
+        <md-list-item class="md-2-line">
+          <div class="md-list-item-text">
+            <h3> Số vé </h3>
+            <p> {{ verifyCtrl.info.sove }} </p>
+          </div>
+        </md-list-item>
+        <md-subheader class="md-no-sticky">Chiều đi</md-subheader>
+        <md-list-item class="md-2-line">
+          <div class="md-list-item-text">
+            <h3> Chuyến bay </h3>
+            <p> {{ verifyCtrl.info.chuyendi.machuyenbay }} </p>
+          </div>
+        </md-list-item>
+        <md-list-item class="md-2-line">
+          <div class="md-list-item-text">
+            <h3> Thời gian đi </h3>
+            <p> {{ verifyCtrl.info.chuyendi.ngaydi }} </p>
+          </div>
+        </md-list-item>
+        <div ng-show="verifyCtrl.isRoundTrip">
+        <md-subheader class="md-no-sticky">Chiều về</md-subheader>
+        <md-list-item class="md-2-line">
+          <div class="md-list-item-text">
+            <h3> Chuyến bay </h3>
+            <p> {{ verifyCtrl.info.chuyenve.machuyenbay }} </p>
+          </div>
+        </md-list-item>
+        <md-list-item class="md-2-line">
+          <div class="md-list-item-text">
+            <h3> Thời gian đi </h3>
+            <p> {{ verifyCtrl.info.chuyenve.ngaydi }} </p>
+          </div>
+        </md-list-item>
+        </div>
+      </md-list>
+      <div layout="row" layout-align="end">
+        <md-button class="md-raised md-primary" ng-click="verifyCtrl.goHome()">Hủy</md-button>
+        <md-button class="md-raised md-primary" ng-click="verifyCtrl.check()">Xác nhận</md-button>
+      </div>
+    </md-card-content>
+  </md-card>
+
+</div>

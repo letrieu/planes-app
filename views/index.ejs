@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Plane Ticket</title>
+  <link rel="stylesheet" href="/stylesheets/angular-material.min.css">
+
+  <script src="/javascripts/angular.min.js"></script>
+  <script src="/javascripts/angular-animate.min.js"></script>
+  <script src="/javascripts/angular-aria.min.js"></script>
+  <script src="/javascripts/angular-messages.min.js"></script>
+  <script src="/javascripts/angular-material.min.js"></script>
+
+  <script src="/javascripts/angular-ui-router.js"></script>
+  <script src="/javascripts/angularApp.js"></script>
+
+  <!-- Services -->
+  <script src="/javascripts/services/serverService.js"></script>
+  <script src="/javascripts/services/planeListService.js"></script>
+  <script src="/javascripts/services/infoService.js"></script>
+  <script src="/javascripts/services/errorService.js"></script>
+  <script src="/javascripts/services/tokenService.js"></script>
+  <script src="/javascripts/services/planeDetailService.js"></script>
+  <script src="/javascripts/services/timeService.js"></script>
+
+  <!-- Controllers -->
+  <script src="/javascripts/controllers/errorCtrl.js"></script>
+  <script src="/javascripts/controllers/infoCtrl.js"></script>
+  <script src="/javascripts/controllers/mainCtrl.js"></script>
+  <script src="/javascripts/controllers/planeListCtrl.js"></script>
+  <script src="/javascripts/controllers/successCtrl.js"></script>
+  <script src="/javascripts/controllers/verifyCtrl.js"></script>
+  
+  <!-- Admin controllers -->
+  <script src="/javascripts/controllers/loginCtrl.js"></script>
+  <script src="/javascripts/controllers/planeListAdminCtrl.js"></script>
+  <script src="/javascripts/controllers/updatePlaneCtrl.js"></script>
+
+</head>
+
+<body ng-app="planeApp">
+	<ui-view></ui-view>
+</body>
+
+</html>
